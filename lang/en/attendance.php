@@ -1,0 +1,61 @@
+<?php
+
+return [
+    'attendance' => 'Attendance',
+    'attendances' => 'Attendances',
+    'module_title' => 'List all Employee Attendance',
+    'module_description' => 'Filter & get your employee\'s monthly attendance record either day wise or attendance head wise.',
+    'is_time_based' => 'Time based Attendance',
+    'mark' => 'Mark Attendance',
+    'filter_record' => 'Filter records to get list of employee.',
+    'not_marked' => 'Attendance not marked for given data.',
+    'could_not_perform_if_payroll_generated' => 'Could not perform this operation as payroll is generated.',
+    'could_not_perform_if_attendance_synched' => 'Could not remove attendance as attendance is synched.',
+    'day_wise' => 'Day Wise',
+    'config' => [
+        'config' => 'Config',
+        'props' => [
+            'allow_employee_clock_in_out' => 'Allow Employees to Clock In/Out',
+            'late_grace_period' => 'Grace Period (Late)',
+            'late_grace_period_tip' => 'Arrival time in minutes after which attendance is considered as late',
+            'early_leaving_grace_period' => 'Grace Period (Early Leaving)',
+            'early_leaving_grace_period_tip' => 'Leaving time in minutes before which attendance is considered as early leaving',
+            'present_grace_period' => 'Grace Period (Overall)',
+            'present_grace_period_tip' => 'Working time in minutes before which attendance is considered as present',
+        ],
+    ],
+    'props' => [
+        'date' => 'Date of Attendance',
+        'remarks' => 'Remarks',
+        'value' => 'Value',
+    ],
+    'categories' => [
+        'present' => 'Present',
+        'holiday' => 'Holiday',
+        'absent' => 'Absent',
+        'leave' => 'Leave',
+        'half_day' => 'Half Day',
+    ],
+    'sub_categories' => [
+        'late' => 'Late',
+        'early_leaving' => 'Early Leaving',
+        'overtime' => 'Overtime',
+    ],
+    'type' => [
+        'type' => 'Attendance Type',
+        'types' => 'Attendance Types',
+        'module_title' => 'Manage all Attendance Types',
+        'module_description' => 'Attendance Type defines the category of each type of attendance available to employees of your company.',
+        'module_example' => 'Present, Late, Absent are some examples of Attendance Types.',
+        'could_not_perform_if_attendance_is_marked' => 'Could not perform this operation if attendance is marked.',
+        'props' => [
+            'name' => 'Name',
+            'alias' => 'Alias',
+            'code' => 'Code',
+            'color' => 'Color',
+            'category' => 'Category',
+            'unit' => 'Unit',
+            'description' => 'Description',
+        ],
+    ],
+];
