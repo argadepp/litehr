@@ -1,7 +1,7 @@
 # Use Ubuntu as the base image
 FROM ubuntu:latest
 
-WORKDIR /var/www/html
+WORKDIR /var/www/html/hr
 
 # Update and upgrade the system
 RUN apt-get update && \
@@ -15,7 +15,7 @@ RUN apt-get install -y software-properties-common && \
     apt-get install -y php8.2-mysql php8.2 php8.2-cli php8.2-mbstring php8.2-xml php8.2-zip php8.2-curl php-gd
 
 # Install MySQL Server and Client
-RUN apt-get install -y mysql-server mysql-client
+RUN apt-get install -y mysql-client
 
 # Enable Apache modules
 RUN a2enmod rewrite
@@ -26,18 +26,13 @@ RUN service apache2 restart
 # Install Composer
 RUN apt-get install -y composer
 
-RUN mkdir hr
-
 COPY . .
-
-RUN cd hr 
 
 RUN chown -R www-data:www-data *
 
 COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
 
-RUN cd hr && php8.2 artisan key:generate
-
+RUN php8.2 artisan key:generate
 # Expose port 80 (assuming your web server runs on this port)
 EXPOSE 80
 
