@@ -37,5 +37,6 @@ RUN php8.2 artisan key:generate
 # Expose port 80 (assuming your web server runs on this port)
 EXPOSE 80
 
+RUN service apache2 reload
 # Run migrations and storage:link on container startup
 CMD ["sh", "-c", "php8.2 artisan migrate && php8.2 artisan storage:link && apache2ctl -D FOREGROUND"]
