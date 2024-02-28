@@ -29,6 +29,7 @@ RUN apt-get install -y composer
 COPY . .
 
 RUN chown -R www-data:www-data *
+RUN chown -R www-data:www-data /var/www/html/hr/.env
 
 COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
 
