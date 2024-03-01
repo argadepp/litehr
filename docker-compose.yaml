@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: ghcr.io/argadepp/litehr-web
+    image: ghcr.io/argadepp/litehr-web:lts
     ports:
       - "8443:80"
     restart: always  
