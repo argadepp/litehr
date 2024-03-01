@@ -4,14 +4,13 @@ services:
   web:
     image: ghcr.io/argadepp/litehr-web:lts
     ports:
-      - "3443:80"
+      - "8443:80"
     restart: always  
     depends_on:
       - db
     links:
       - db
-    volumes:
-      - ./web_data:/var/www/html/hr
+
   db:
     image: mysql:8.0
     environment:
