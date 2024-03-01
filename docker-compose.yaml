@@ -4,7 +4,7 @@ services:
   web:
     image: ghcr.io/argadepp/litehr-web:lts
     ports:
-      - "8003:80"
+      - "3443:80"
     restart: always  
     depends_on:
       - db
